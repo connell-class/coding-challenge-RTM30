@@ -7,12 +7,13 @@ import org.springframework.stereotype.Service;
 
 import com.revature.dao.DaoContract;
 import com.revature.model.GroceryItem;
+import com.revature.model.GroceryList;
 
 @Service
 public class GroceryItemService {
 	  private DaoContract<GroceryItem, Integer> dao;
 	  @Autowired
-	  public void setUserService(DaoContract<GroceryItem, Integer> dc) {
+	  public void setGroceryItemService(DaoContract<GroceryItem, Integer> dc) {
 	    dao = dc;
 	  }
 	  public List<GroceryItem> getAll() {
@@ -26,9 +27,9 @@ public class GroceryItemService {
 		    return dao.findById(id);
 		  }
 		  public GroceryItem update(GroceryItem newGroceryList) {
-			  GroceryItem oldUser = dao.findById(newGroceryList.getGroceryItemId());
-		    oldUser = dao.update(newGroceryList);
-		    return dao.findById(oldUser.getGroceryItemId());
+			  GroceryItem oldGroceryItem = dao.findById(newGroceryList.getGroceryItemId());
+		    oldGroceryItem = dao.update(newGroceryList);
+		    return dao.findById(oldGroceryItem.getGroceryItemId());
 		  }
 		  public boolean deleteById(int id) {
 		    dao.delete(dao.findById(id));

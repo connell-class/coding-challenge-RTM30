@@ -9,7 +9,7 @@ import com.revature.dao.DaoContract;
 public class GroceryListService {
 	  private DaoContract<GroceryList, Integer> dao;
 	  @Autowired
-	  public void setUserService(DaoContract<GroceryList, Integer> dc) {
+	  public void setGroceryListService(DaoContract<GroceryList, Integer> dc) {
 	    dao = dc;
 	  }
 	  public List<GroceryList> getAll() {

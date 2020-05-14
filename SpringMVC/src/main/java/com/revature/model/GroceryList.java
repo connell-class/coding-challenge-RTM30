@@ -16,9 +16,9 @@ public class GroceryList {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int groceryListId;
 	
-	@OneToOne
-	@JoinColumn(name = "groceryItem_Id", referencedColumnName = "groceryList_Id", unique = true, nullable = false)
-	private GroceryList groceryId;
+//	@OneToOne
+//	@JoinColumn(name = "groceryItem_Id", referencedColumnName = "groceryList_Id", unique = true, nullable = false)
+//	private GroceryList groceryId;
 	
 	@Column(name="groceryList_Name")
 	private String listName;
